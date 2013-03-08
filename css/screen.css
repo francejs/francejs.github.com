@@ -1,0 +1,57 @@
+
+            html {
+                font-family: Palatino, "Palatino Linotype", "Liberation Serif", serif;
+            }
+
+            html,
+            body {
+                background: #F1F1F1;
+                color: #333333;
+            }
+
+            a {
+                color: #5C66CC;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .wrapper {
+                max-width: 600px;
+                margin: auto;
+                background: white;
+                padding: 10px;
+                border-left: 4px solid #3AA9B8;
+                line-height: 1.5em;
+                box-shadow: 0 0 10px 0 #CCC;
+                padding: 60px 40px 30px 40px;
+                box-sizing: border-box;
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                hyphens: auto;
+            }
+
+            h1 {
+                margin: 0;
+                padding: 0;
+                margin-bottom: 15px;
+                font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            }
+
+            hr {
+                height: 0;
+                border: 0;
+                border-bottom: 1px solid black;
+            }
+
+            dt {
+				font-weight:bold;
+            }
+
+            dd {
+				padding:0;
+				margin:0;
+            }
+
