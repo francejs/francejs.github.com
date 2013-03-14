@@ -21,9 +21,9 @@ a:hover {
   margin: auto;
   background: white;
   padding: 10px;
-  border-left: 4px solid #3aa9b8;
+  border-left: 4px solid #3AA9B8;
   line-height: 1.5em;
-  box-shadow: 0 0 10px 0 #cccccc;
+  box-shadow: 0 0 10px 0 #CCC;
   padding: 60px 40px 30px 40px;
   box-sizing: border-box;
   -webkit-hyphens: auto;
@@ -50,4 +50,8 @@ dt {
 dd {
   padding: 0;
   margin: 0;
+}
+
+article.manifest {
+  font-family: Palatino, "Palatino Linotype", "Liberation Serif", serif;
 }
