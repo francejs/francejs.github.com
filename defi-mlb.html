@@ -1,0 +1,197 @@
+---
+layout: default
+title: Défi de Mathias Le Brun
+---
+<article>
+  <h2>Défi de Mathias Le Brun</h2>
+  <p>Au tour de Mathias Le Brun de vous défier. En jeu, une place pour CaenJS à gagner pour le premier à avoir compléter le défi.</p>
+  <p>Attention : Si vous jouez pour le fun, merci de ne pas publier la solution pour laisser à ceux qui jouent pour la place l'opportunité de gagner honnêtement ;).</p>
+	<hr />
+  <p>Pour commencer, ouvrez la console et suivez les instructions ;).</p>
+	<hr />
+  <p><a href="concours.html" title="Retour à la liste des défis">Retour</a></p>
+</article>
+<script type="text/javascript">
+;(function(){
+  
+  var tests = []
+    , descriptions = []
+    , attempts = []
+    , mathRandom = Math.random
+    , i = -1
+    , done = false
+    , log = function(){console.log.apply(console, arguments)}
+    , warn = function(){console.warn.apply(console, arguments)}
+    
+  function pushAttempt(fn){
+    attempts.push("test(" + fn.toString() + ")")
+  }
+ 
+  function test(any){
+    var out
+    if(done){
+      log("You can tweet that :")
+      log("@FranceJS I succeeded in the test : " + any)
+      done = false
+      return ":)"
+    }
+    if(any === "last"){
+      log(descriptions[i])
+      return
+    }
+    if(any === "start") {
+      log(descriptions[++i])
+      return
+    }
+    if(i == -1){
+      log("Pass me 'start'")
+      return 
+    }
+    if((out = tests[i](any)) === true) {
+      log("Good!")
+      log(descriptions[++i])
+    } else if(out === false) {
+      warn("Nope.")
+    }
+  }
+  
+  function complete(){
+    log(attempts.join("\n\n\n\n"))
+    log("Paste the previous output into a Gist and pass the link to the test function")
+    done = true
+  }
+  
+  function failed(){
+    warn("Nope.")
+  }
+  
+  function randomArray(min, l){
+    var i = -1
+      , l = arguments.length > 1 ? l >>> 0 : (min + ~~(mathRandom() * 6)) >>> 0
+      , keys = Array(l)
+    while(++i < l) keys[i] = ~~(mathRandom() * (1<<30))
+    return keys
+  }
+  
+  
+  tests.push(propertiesTest)
+  descriptions.push("Pass a function that returns all the owned property names of its first argument")
+  function propertiesTest(fn){
+    pushAttempt(fn)
+    var keys = randomArray(5)
+      , nonEnumerable = ~~(keys.length / 2)
+      , i = -1, l = keys.length 
+      , k, m
+      , object = Object.create(null)
+      , result
+      , found
+    while(++i < l) {
+      if(nonEnumerable--){
+        Object.defineProperty(object, keys[i], {value:mathRandom(), enumerable:false})
+        continue
+      }
+      object[keys[i]] = mathRandom()
+    }
+    if(result = fn(object)) {
+      if(result.length == l) {
+        while(--l > -1) {
+          k = -1, m = keys.length
+          while(++k < m) {
+            if(result[l] == keys[k]) {
+              keys.splice(k, 1)
+              break
+            }
+          }
+        }
+        return !keys.length
+      }
+    }
+    return false
+  }
+  
+  
+  tests.push(iteratorTest)
+  descriptions.push("Pass a function taking an array as first argument, which returns a function. \
+The returned function should, at each call, return the next item in the array or null if there is no more\
+If the array changes, it shouldn't impact the results of this function")
+  function iteratorTest(fn){
+    pushAttempt(fn)
+    var l = 30 + ~~(mathRandom() * 30)
+      , array = randomArray(l)
+      , length = array.length
+      , copy = array.concat()
+      , i = -1
+      , iterator = fn(array)
+      , item
+    while(item = iterator()) {
+      if(copy[++i] !== item) {
+        return false
+      } 
+      if(~~(mathRandom() * length) > .8 * length) {
+        array.splice(i, 1)
+      }
+    }
+    return item === null && ++i == length 
+  }
+  
+  
+  tests.push(UInt32test)
+  descriptions.push("Pass a function that converts its first arguments into a UInt32")
+  function UInt32test(fn){
+    pushAttempt(fn)
+    var array = randomArray(0, 32)
+      , l = array.length
+      , item
+    while(--l) {
+      if(fn(item = (array[l] << 4)) !== item >>> 0) return false
+    }
+    return true
+  }
+  
+  
+  tests.push(cookieTest)
+  descriptions.push("Pass a function which returns the value of the cookie that has the name passed as first argument")
+  function cookieTest(fn){
+    pushAttempt(fn)
+    var succeeded = false
+      , cookieName = "cookie" + String(~~(mathRandom() * (1<<30)))
+      , value = String(~~(mathRandom() * (1<<30)))
+    document.cookie = cookieName + "=" + value
+    if(fn(cookieName) === value) succeeded = true
+    document.cookie = cookieName + "=; expires=" + new Date().toGMTString()
+    return succeeded
+  }  
+  
+  tests.push(propertyTest)
+  descriptions.push("Pass a function that returns an object which has an enumerable, read-only 'foo' property equal to 'bar' but that doesn't own it")
+  function propertyTest(fn){
+    pushAttempt(fn)
+    var object = fn()
+      , proto = Object.getPrototypeOf(object)
+      , propertyDescriptor = Object.getOwnPropertyDescriptor(proto, "foo")
+    
+    return typeof propertyDescriptor == "object" && propertyDescriptor.configurable == false && propertyDescriptor.enumerable == true && propertyDescriptor.value == "bar" && propertyDescriptor.writable == false
+  }
+  
+  tests.push(asyncTest)
+  descriptions.push("Pass a function that takes a first `fn` argument, calling it every 200ms for 3 times with its last output as first argument as soon as you got the first output")
+  function asyncTest(fn){
+    pushAttempt(fn)
+    var i = 7, shift = 3
+    function runner(output){
+      return i = (output === void 0 ? i : output) << ++shift
+    }
+    fn(runner)
+    setTimeout(function(){
+      if(229376 === i) complete()
+      else failed()
+    }, 2000)
+  }
+  
+  window.test = test
+  log("Hey! Pass 'start' to the `test` function")
+  log("All the anwsers should be passed to `test`")
+  log("Pass `last` if you want the last question")
+    
+})()
+</script>
