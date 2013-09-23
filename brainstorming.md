@@ -39,5 +39,5 @@
 
 Composition :
 * formulaire d'adhésion ou lien vers adhésion
-* Actualité (communiqués, prochain meetup (fitre via géoloc ) , prochain conférence
+* Actualité (communiqués, prochain meetup (fitre via géoloc ) , prochaine conférence
 * 1 Success Stoty
