@@ -1,0 +1,73 @@
+
+
+
+.wrapper
+  width: 93.75%
+  margin: 0 auto
+  +container
+  // +susy-grid-background
+
+
+section,
+main,
+footer,
+header
+  margin: emCalc(60px) 0
+
+
+// TOP-HEADER
+
+[id=logo]
+  +hide-text()
+  background: transparent url("../assets/img/francejs-logo-big.png")
+  width: 136px
+  height: 160px
+  position: absolute
+  margin-left: -(136px / 2)
+  left: 50%
+  top: -63px
+
+
+.top-header
+  margin-top: emCalc(120px)
+  position: relative
+  +pie-clearfix
+  @extend .border-left
+  @extend .border-right
+
+  h2
+    background: $darkGrey
+    margin: 0
+    width: 50%
+    text-align: center
+    color: $nearlyWhite
+    font-size: 36px
+    padding: .2em
+    float: left
+    border-top: emCalc(12px) $headerBorder solid
+    border-bottom: emCalc(16px) $headerBorder solid
+
+[id=asso],
+[id=commu]
+  &:before
+    content: url("../assets/img/chevron.png")
+    margin-right: .2em
+    position: relative
+    top: 6px
+
+
+
+footer
+
+  p
+    font-size: .8em
+    background: $footerBG
+    position: relative
+    padding-left: 35%
+
+    &:before
+      content: url("../assets/img/francejs-logo-small.png")
+      position: absolute
+      top: -164%
+      left: 8%
+

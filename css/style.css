@@ -1,5 +1,9 @@
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
+.border-left, .top-header { border-left: 1em #f2c80a solid; }
+
+.border-right, .top-header { border-right: 1em #f2c80a solid; }
+
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
@@ -76,3 +80,19 @@ html, body { font-size: 100%; font-family: "Helvetica Neue", Helvetica, Arial, "
 
 a { text-decoration: none; color: #f2c80a; font-weight: 400; -webkit-transition: color 0.5s ease; -moz-transition: color 0.5s ease; -o-transition: color 0.5s ease; transition: color 0.5s ease; }
 a:hover { color: #575748; }
+
+.wrapper { width: 93.75%; margin: 0 auto; padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto; }
+.wrapper:after { content: ""; display: table; clear: both; }
+
+section, main, footer, header { margin: 3.75em 0; }
+
+[id=logo] { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; background: transparent url("../assets/img/francejs-logo-big.png"); width: 136px; height: 160px; position: absolute; margin-left: -68px; left: 50%; top: -63px; }
+
+.top-header { margin-top: 7.5em; position: relative; }
+.top-header:after { content: ""; display: table; clear: both; }
+.top-header h2 { background: #747471; margin: 0; width: 50%; text-align: center; color: #fafafa; font-size: 36px; padding: 0.2em; float: left; border-top: 0.75em #dcdccb solid; border-bottom: 1em #dcdccb solid; }
+
+[id=asso]:before, [id=commu]:before { content: url("../assets/img/chevron.png"); margin-right: 0.2em; position: relative; top: 6px; }
+
+footer p { font-size: 0.8em; background: lightgrey; position: relative; padding-left: 35%; }
+footer p:before { content: url("../assets/img/francejs-logo-small.png"); position: absolute; top: -164%; left: 8%; }
