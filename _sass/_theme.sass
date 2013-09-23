@@ -9,9 +9,9 @@
 
 
 section,
-main,
+aside,
 footer,
-header
+.top-header
   margin: emCalc(60px) 0
 
 
@@ -30,6 +30,7 @@ header
 
 .top-header
   margin-top: emCalc(120px)
+  margin-bottom: 0
   position: relative
   +pie-clearfix
   @extend .border-left
@@ -56,6 +57,53 @@ header
     top: 6px
 
 
+// MAIN
+
+section
+  background: $nearlyWhite
+  margin-left: 1em
+  padding-bottom: emCalc(30px)
+
+main
+  +span-columns(8,12)
+
+
+
+.header
+  & ~ *
+    padding-left: 1em
+    padding-right: 1em
+  & ~ ul,
+  & ~ol
+    padding-left: 3em
+
+  h2
+    font-size: emCalc(22px)
+    background: $darkGrey
+    color: $nearlyWhite
+    border-top: emCalc(14px) $headerBorder solid
+    border-bottom: emCalc(10px) $headerBorder solid
+    padding-left: emCalc(40px)
+    position: relative
+    &:before
+      content: ""
+      display: block
+      background: $darkGrey
+      width: 1em
+      height: 1.098em
+      position: absolute
+      left: -1em
+
+
+
+
+
+
+aside
+  +span-columns(4 omega, 12)
+
+
+// FOOTER
 
 footer
 
