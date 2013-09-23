@@ -13,6 +13,8 @@ aside,
 footer,
 .top-header
   margin: emCalc(60px) 0
+  @media only screen and (max-width: $S )
+    margin: emCalc(30px) 0
 
 
 // TOP-HEADER
@@ -35,6 +37,8 @@ footer,
   +pie-clearfix
   @extend .border-left
   @extend .border-right
+  @media only screen and (max-width: $S )
+    margin-top: emCalc(76px)
 
   h2
     background: $darkGrey
@@ -42,11 +46,17 @@ footer,
     width: 50%
     text-align: center
     color: $nearlyWhite
-    font-size: 36px
+    // font-size: 36px
     padding: .2em
     float: left
     border-top: emCalc(12px) $headerBorder solid
     border-bottom: emCalc(16px) $headerBorder solid
+    @media only screen and (max-width: $S )
+      text-indent: -999em
+    +at-breakpoint($M)
+      font-size: emCalc(30px)
+    +at-breakpoint($L)
+      font-size: emCalc(36px)
 
 [id=asso],
 [id=commu]
@@ -55,6 +65,8 @@ footer,
     margin-right: .2em
     position: relative
     top: 6px
+    @media only screen and (max-width: $S )
+      display: none
 
 
 // MAIN
@@ -66,6 +78,8 @@ section
 
 main
   +span-columns(8,12)
+  @media only screen and (max-width: $S )
+    +span-columns(12, 12)
 
 
 
@@ -76,6 +90,8 @@ main
   & ~ ul,
   & ~ol
     padding-left: 3em
+    @media only screen and (max-width: $S )
+      padding-left: 2.5em
 
   h2
     font-size: emCalc(22px)
@@ -85,6 +101,8 @@ main
     border-bottom: emCalc(10px) $headerBorder solid
     padding-left: emCalc(40px)
     position: relative
+    @media only screen and (max-width: $S )
+      padding-left: .7em
     &:before
       content: ""
       display: block
@@ -97,10 +115,81 @@ main
 
 
 
+// Aside
 
 
 aside
   +span-columns(4 omega, 12)
+  @media only screen and (max-width: $S )
+    +span-columns(12, 12)
+
+
++font-face("fontello", font-files("fontello.woff", "fontello.ttf", "fontello.svg", "fontello.eot" ))
+
+
+.social
+  list-style: none
+  margin: 0
+  padding: 0
+
+  li
+    display: inline
+    margin-right: .6%
+
+    &:last-child
+      margin-right: 0
+
+  a
+    display: inline-block
+    position: relative
+    width: 18.3%
+    height: 60px
+    background: $darkGrey
+    color: $burnYellow
+    &:hover
+      background: $headerBorder
+    &:active
+      color: $grayYellow
+
+
+
+.icon
+  display: inline-block
+  font-size: 2.4em
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-top: -12.2px
+  margin-left: -22px
+
+  &:after
+    font-family: "fontello"
+    speak: none
+    text-transform: none
+    -webkit-font-smoothing: antialiased
+
+
+.github
+  &:after
+    content: "\e805"
+
+.irc
+  &:after
+    content: "\e801"
+
+.twitter
+  &:after
+    content: "\e804"
+
+.gplus
+  &:after
+    content: "\e802"
+
+.groups
+  &:after
+    content: "\e800"
+
+
 
 
 // FOOTER
@@ -112,7 +201,9 @@ footer
     background: $footerBG
     position: relative
     padding-left: 35%
-
+    @media only screen and (max-width: $S )
+      padding-left: 41%
+      font-size: .6em
     &:before
       content: url("../assets/img/francejs-logo-small.png")
       position: absolute

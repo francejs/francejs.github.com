@@ -87,25 +87,58 @@ hr { border: 0; height: 0; border-top: 1px solid rgba(38, 38, 38, 0.1); border-b
 .wrapper:after { content: ""; display: table; clear: both; }
 
 section, aside, footer, .top-header { margin: 3.75em 0; }
+@media only screen and (max-width: 61.9375em) { section, aside, footer, .top-header { margin: 1.875em 0; } }
 
 [id=logo] { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; background: transparent url("../assets/img/francejs-logo-big.png"); width: 136px; height: 160px; position: absolute; margin-left: -68px; left: 50%; top: -63px; }
 
 .top-header { margin-top: 7.5em; margin-bottom: 0; position: relative; }
 .top-header:after { content: ""; display: table; clear: both; }
-.top-header h2 { background: #747471; margin: 0; width: 50%; text-align: center; color: #fafafa; font-size: 36px; padding: 0.2em; float: left; border-top: 0.75em #dcdccb solid; border-bottom: 1em #dcdccb solid; }
+@media only screen and (max-width: 61.9375em) { .top-header { margin-top: 4.75em; } }
+.top-header h2 { background: #747471; margin: 0; width: 50%; text-align: center; color: #fafafa; padding: 0.2em; float: left; border-top: 0.75em #dcdccb solid; border-bottom: 1em #dcdccb solid; }
+@media only screen and (max-width: 61.9375em) { .top-header h2 { text-indent: -999em; } }
+@media (min-width: 62em) { .top-header h2 { font-size: 1.875em; } }
+@media (min-width: 75em) { .top-header h2 { font-size: 2.25em; } }
 
 [id=asso]:before, [id=commu]:before { content: url("../assets/img/chevron.png"); margin-right: 0.2em; position: relative; top: 6px; }
+@media only screen and (max-width: 61.9375em) { [id=asso]:before, [id=commu]:before { display: none; } }
 
 section { background: #fafafa; margin-left: 1em; padding-bottom: 1.875em; }
 
 main { width: 66.19718%; float: left; margin-right: 1.40845%; display: inline; }
+@media only screen and (max-width: 61.9375em) { main { width: 100%; float: left; margin-right: 1.40845%; display: inline; } }
 
 .header ~ * { padding-left: 1em; padding-right: 1em; }
 .header ~ ul, .header ~ ol { padding-left: 3em; }
+@media only screen and (max-width: 61.9375em) { .header ~ ul, .header ~ ol { padding-left: 2.5em; } }
 .header h2 { font-size: 1.375em; background: #747471; color: #fafafa; border-top: 0.875em #dcdccb solid; border-bottom: 0.625em #dcdccb solid; padding-left: 2.5em; position: relative; }
+@media only screen and (max-width: 61.9375em) { .header h2 { padding-left: 0.7em; } }
 .header h2:before { content: ""; display: block; background: #747471; width: 1em; height: 1.098em; position: absolute; left: -1em; }
 
 aside { width: 32.39437%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }
+@media only screen and (max-width: 61.9375em) { aside { width: 100%; float: left; margin-right: 1.40845%; display: inline; } }
+
+@font-face { font-family: "fontello"; src: url('../assets/fonts/fontello.woff') format('woff'), url('../assets/fonts/fontello.ttf') format('truetype'), url('../assets/fonts/fontello.svg') format('svg'), url('../assets/fonts/fontello.eot') format('embedded-opentype'); }
+
+.social { list-style: none; margin: 0; padding: 0; }
+.social li { display: inline; margin-right: 0.6%; }
+.social li:last-child { margin-right: 0; }
+.social a { display: inline-block; position: relative; width: 18.3%; height: 60px; background: #747471; color: #f2c80a; }
+.social a:hover { background: #dcdccb; }
+.social a:active { color: #575748; }
+
+.icon { display: inline-block; font-size: 2.4em; position: absolute; top: 50%; left: 50%; margin-top: -12.2px; margin-left: -22px; }
+.icon:after { font-family: "fontello"; speak: none; text-transform: none; -webkit-font-smoothing: antialiased; }
+
+.github:after { content: "\e805"; }
+
+.irc:after { content: "\e801"; }
+
+.twitter:after { content: "\e804"; }
+
+.gplus:after { content: "\e802"; }
+
+.groups:after { content: "\e800"; }
 
 footer p { font-size: 0.8em; background: lightgrey; position: relative; padding-left: 35%; }
+@media only screen and (max-width: 61.9375em) { footer p { padding-left: 41%; font-size: 0.6em; } }
 footer p:before { content: url("../assets/img/francejs-logo-small.png"); position: absolute; top: -164%; left: 8%; }
