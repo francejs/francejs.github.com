@@ -6,25 +6,55 @@
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <meta name="description" content="FranceJS est un aggrégats de communautés autour de JavaScript.">
         <meta name="keywords" content="javascript, france, développeurs, js, frontend, communauté">
-        <link src="http://necolas.github.com/normalize.css/2.1.0/normalize.css">
-        <link rel="stylesheet" media="all" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="wrapper">
-            <h1><a href="/" title="Retour à l'accueil">#FranceJS</a></h1>
-            <hr />
-            {{content}}
-        </div>
-        <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-39130596-1']);
-          _gaq.push(['_trackPageview']);
 
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+            <!-- TOP-HEADER -->
+            <header class="top-header">
+                <a href="/" title="Retour à l'accueil"><h1 id="logo">#FranceJS</h1></a>
+                <h2 id="asso">Association</h2>
+                <h2 id="commu">Communautée</h2>
+            </header>
+
+            <!-- MAIN -->
+            <main role="main">
+                {{content}}
+            </main> <!-- end main -->
+
+
+            <aside>
+                <div class="socialize">
+                    <ul class="social">
+                        <li><a href="https://github.com/francejs" title="Voir notre dépôt GitHub"><span class="icon github"></span></a></li>
+                        <li><a href="https://www.twitter.com/francejs" title="Suit le compte Twitter"><span class="icon twitter"></span></a></li>
+                        <li><a href="https://plus.google.com/u/0/communities/112831300754603977687" title="Rejoins la communauté Google +"><span class="icon gplus"></span></a></li>
+                        <li><a href="https://groups.google.com/d/forum/francejs" title="Visiter le groupe Google +"><span class="icon groups"></span></a></li>
+                        <li><a href="irc://irc.freenode.net/francejs" title="Chatter sur IRC"><span class="icon irc"></span></a></li>
+                    </ul>
+                </div>
+            </aside>
+
+
+        </div>  <!-- end .wrapper -->
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2013 Association FranceJS</p>
+        </footer>
+
+
+
+
+         <script>
+             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+             e.src='//www.google-analytics.com/analytics.js';
+             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+             ga('create','UA-39130596-1');ga('send','pageview');
         </script>
+
     </body>
 </html>
