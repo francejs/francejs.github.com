@@ -3,17 +3,19 @@ layout: default
 title: Défi de Nicolas Froidure
 ---
 <script type="text/passphrase">WW91J3JlIG5vdCBzdXBwb3NlZCB0byBzZWUgaXQu</script>
-<article>
-  <h2>Concours CaenJS</h2>
-  <p>Envie de gagner une place pour le prochain CaenJS ? Relevez le défi de @nfroidure.</p>
-  <p>À la fin du défi, une phrase vous sera donnée, twittez-la avant les autres à @FranceJS pour gagner une des 5 places en jeu.</p>
-  <p>Pour commencer, ouvrez la console et suivez les instructions ;).</p>
-  <p>Info : Défi terminé et remporté par Mathias Le Brun, la solution est en commentaire dans la source.</p>
-	<hr />
-  <p><a href="concours.html" title="Retour à la liste des défis">Retour</a></p>
-	<hr />
-  <p><small>Créé avec <a href="http://github.com/kalisjoshua/Jasper">Jasper</a>.</small></p>
-</article>
+<section>
+	<article>
+		<h2>Concours CaenJS</h2>
+		<p>Envie de gagner une place pour le prochain CaenJS ? Relevez le défi de @nfroidure.</p>
+		<p>À la fin du défi, une phrase vous sera donnée, twittez-la avant les autres à @FranceJS pour gagner une des 5 places en jeu.</p>
+		<p>Pour commencer, ouvrez la console et suivez les instructions ;).</p>
+		<p>Info : Défi terminé et remporté par Mathias Le Brun, la solution est en commentaire dans la source.</p>
+		<hr />
+		<p><a href="concours.html" title="Retour à la liste des défis">Retour</a></p>
+		<hr />
+		<p><small>Créé avec <a href="http://github.com/kalisjoshua/Jasper">Jasper</a>.</small></p>
+	</article>
+</section>
 <script type="text/javascript">
 	var Jasper=function(){"use strict";function t(t,r){return function(e){return t(r,e)}}function r(t){return!isNaN(parseFloat(t))&&isFinite(t)}function e(t,r){return RegExp(t,"i").test({}.toString.call(r))}function n(t,r){var e;if(t=t||"help",i[t]||0===arguments.length)e=r||0===r?i[t].apply(this,[].slice.call(arguments,1)):i[t].call(this);else try{p[c].apply(this,arguments)?(s[c]=!0,e=i.hint(o()+"\nLevel "+c+": "),c++,e+="\n\nNext Task: "+i.help()):e="Not quite try again."}catch(n){throw e=/not\sa\sfunction/i.test(n.message)?"Remember that time I told you to pass a function?":/JSON/i.test(n.message)?"The JSON string needs to be properly formatted.":"I'm not sure at all what you are trying to do.",n}return e}var o,i,s=[],a=[],u=t(e,"function"),l=t(e,"string"),p=[],h=!1,c=0;return o=function(){var t,r;return r="Admirable Awesome Brilliant Capital Excellent Fabulous Fantabulous Glorious Good Great Impressive Keen Magnificent Outstanding Resplendent Splendid Splendiferous Superb Superior Swanky".split(" "),t=r.length,function(){var e=~~(Math.random()*t)%t;return r=r.slice(e).concat(r.slice(0,e)),("%"+["!","."][~~(2*Math.random())]).replace("%",r[0])}}(),i={ask:function(t,r,e){if(h)throw Error("Jasper has been locked, no new asks may be added.");var n=arguments.length;if(n>0){if(2===n&&(e=r,r=""),!l(t))throw Error("Intro text must be a String.");if(!l(r))throw Error("Hint text must be a String.");if(!u(e))throw Error("Challenge must be a Function.");e.intro=t,e.hint=r,p.push(e)}else h=!0},empty:function(t,r){if(!0!==t)throw Error("Empty must be passed first_argument === 'true'.");p.length&&!r&&a.push(p),r&&(a=[]),p=[],h=!1,i.restart()},help:function(){return p.length>c&&!1!==s[c]?p[c].intro.replace("#",1+c):"\nCongratulations you're done; start over with Jasper('restart')."},hint:function(t){return(t||"")+p[c].hint+(t?"\n"+i.help():"")},restart:function(){return s=[],c=0,"All clear; go for it!\n"+i.help()},restore:function(t){if(!0===t){if(!a.length)throw Error("Restore called with no history to restore.");return p=a.pop(),i.restart()}throw Error("Restore must be passed first_argument === 'true'.")},skip:function(t){if(void 0!==t&&!r(t))throw Error("Skip needs a number to skip to, "+"or a string to search for; '%' doesn't work.".replace("%",t));if(0===+t)throw Error("Why would you want to skip to where you are? Zero passed to Jasper('skip').");return t=t||1,s[c]=s[c]||!1,c=(c+~~t)%p.length,i.help()}},n.help=n.start=n.toString=function(){return n()},console.log("Level 0: Completed by opening your browser's console.\n'Jasper' is waiting for 'start'. GL! HF!"),n}();
 
