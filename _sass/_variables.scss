@@ -1,0 +1,32 @@
+// Colors
+
+$burnYellow: #f2c80a;
+$grayYellow: #575748;
+$darkGrey: #747471;
+$headerBorder: #dcdccb;
+$nearlyWhite: #fafafa;
+$dark: #262626;
+$bodyBG: #ededed;
+$footerBG: lightgrey;
+
+$em-base: 16px;
+
+// Basic Grid
+
+$total-columns: 12;
+$column-width: 5em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$show-grid-backgrounds: true;
+
+$border-box-sizing: true;
+$legacy-support-for-ie: false;
+
+// Breakpoint variables
+
+$S: 61.9375em;
+$M: 62em;
+$L: 75em;
+$XL: 100em;
