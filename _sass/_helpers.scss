@@ -1,0 +1,13 @@
+// CSS image replacement
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+@mixin hide-text {
+  font: #{0 / 0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
