@@ -12,6 +12,8 @@ We must define here how the website must be.
 
 ## Cmd
 
+Build all : `$ compass compile && jekyll build`
+
 - Compile css: ```$ compass compile```
-- Create website: ```$ jekyll```
+- Create website: ```$ jekyll build```
 - Local server: ```$ jekyll serve```

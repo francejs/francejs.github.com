@@ -78,7 +78,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 html, body { font-size: 100%; font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; line-height: 1.5em; color: #262626; background: #ededed; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
 
-a { text-decoration: none; color: #f2c80a; font-weight: 400; -webkit-transition: color 0.5s ease; -moz-transition: color 0.5s ease; -o-transition: color 0.5s ease; transition: color 0.5s ease; }
+a { text-decoration: none; color: #efc000; font-weight: 500; text-decoration: underline; -webkit-transition: color 0.5s ease; -moz-transition: color 0.5s ease; -o-transition: color 0.5s ease; transition: color 0.5s ease; }
 a:hover { color: #575748; }
 
 hr { border: 0; height: 0; border-top: 1px solid rgba(38, 38, 38, 0.1); border-bottom: 1px solid rgba(38, 38, 38, 0.3); }
