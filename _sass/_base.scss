@@ -20,11 +20,11 @@ a {
   @include transition(all 0.2s ease);
   &:hover {
     color: $burnYellow;
-    // text-decoration: underline
- 
+    text-decoration: none; 
   }
-  // &:active
-  //   color: darken($burnYellow, 15%)
+  &:active {
+    color: darken($burnYellow, 15);
+  }
 }
 
 hr {
