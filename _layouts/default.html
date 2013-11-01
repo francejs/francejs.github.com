@@ -7,30 +7,64 @@
         <meta name="description" content="FranceJS est un agrégat de communautés autour de JavaScript.">
         <meta name="keywords" content="javascript, france, développeurs, js, frontend, communauté">
         <link rel="stylesheet" href="css/style.css">
+        <!--[if lt IE 9]>
+            <script src="javascripts/html5shiv.js"></script>
+        <![endif]-->
     </head>
     <body>
-        <div class="wrapper">
 
-            <!-- TOP-HEADER -->
-            <header class="top-header">
-                <a href="/" title="Retour à l'accueil"><h1 id="logo">#FranceJS</h1></a>
-                <h2 id="asso">Association</h2>
-                <h2 id="commu">Communauté</h2>
-            </header>
+        <!-- TOP-HEADER -->
+        <header class="top-header">
+            <a href="/" title="Retour à l'accueil"><h1 id="logo">#FranceJS</h1></a>
+        </header>
+        <div class="wrapper">
+            <div class="primary">
+                <p>FranceJS, c'est l'ensemble des communautés françaises autour de <b>JavaScript</b>.</p>
+            </div>
 
             <!-- MAIN -->
             <main role="main">
+                <h2 id="asso">Association</h2>
                 {{content}}
             </main> <!-- end main -->
 
-
             <aside>
+                <h2 id="commu">Communauté</h2>
+
+                <section>
+                    <div class="header border-left">
+                        <h3>Rejoignez-nous !</h3>
+                    </div>
+
+                    <ul class="community-links">
+                        <li><a href="https://github.com/francejs" title="Voir notre dépôt GitHub">Github</a></li>
+                        <li><a href="https://www.twitter.com/francejs" title="Voir le compte Twitter">Twitter</a></li>
+                        <li><a href="https://plus.google.com/u/0/communities/112831300754603977687" title="Voir la communauté Google">Google Community</a></li>
+                        <li><a href="irc://irc.freenode.net/francejs" title="Chatter sur IRC">#francejs @ freenode</a></li>
+                    </ul>
+                </section>
                 <div class="socialize">
                     <ul class="social">
-                        <li><a href="https://github.com/francejs" title="Voir notre dépôt GitHub"><span class="icon github"></span></a></li>
-                        <li><a href="https://www.twitter.com/francejs" title="Suis le compte Twitter"><span class="icon twitter"></span></a></li>
-                        <li><a href="https://plus.google.com/u/0/communities/112831300754603977687" title="Rejoins la communauté Google +"><span class="icon gplus"></span></a></li>
-                        <li><a href="irc://irc.freenode.net/francejs" title="Chatter sur IRC"><span class="icon irc"></span></a></li>
+                        <li>
+                            <a href="https://github.com/francejs" title="Voir notre dépôt GitHub">
+                                <span class="icon github"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/francejs" title="Suis le compte Twitter">
+                                <span class="icon twitter"></span>
+                            </a>
+                        </li>
+                        <li><a href="https://plus.google.com/u/0/communities/112831300754603977687" title="Rejoins la communauté Goo
+                            gle +">
+                                <span class="icon gplus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="irc://irc.freenode.net/francejs" title="Chatter sur IRC">
+                                <span class="icon irc"></span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </aside>
@@ -40,7 +74,9 @@
 
         <!-- FOOTER -->
         <footer>
-            <p>&copy; 2013 Association FranceJS</p>
+            <div class="wrapper">
+                <p>&copy; 2013 Association FranceJS</p>
+            </div>
         </footer>
 
 

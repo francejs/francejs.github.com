@@ -17,7 +17,7 @@ a {
   color: #efc000;
   font-weight: 500;
   text-decoration: underline;
-  @include transition(color 0.5s ease);
+  @include transition(color 0.2s ease);
   &:hover {
     color: $grayYellow;
     // text-decoration: underline

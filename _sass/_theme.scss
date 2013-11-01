@@ -1,17 +1,21 @@
+@include font-face("fontello", font-files("fontello.woff", "fontello.ttf", "fontello.svg", "fontello.eot"));
+
 .wrapper {
-  width: 93.75%;
+  max-width: emCalc(960px);
   margin: 0 auto;
   @include container;
-  // +susy-grid-background
+  // +susy-grid-background  
+  @media only screen and (max-width: $S) {
+    padding-left: 0;
+    padding-right: 1em;
+  }
 }
 
-section,
-aside,
-footer,
-.top-header {
-  margin: emCalc(60px) 0;
+section {
+  padding: 1.5em;
+  margin-top: emCalc(30px);
   @media only screen and (max-width: $S) {
-    margin: emCalc(30px) 0;
+    margin-top: emCalc(15px);
   }
 }
 
@@ -19,62 +23,78 @@ footer,
 
 [id=logo] {
   @include hide-text;
-  background: transparent url("../assets/img/francejs-logo-big.png");
+  background: transparent url("../assets/img/logo.svg") no-repeat;
   width: 136px;
   height: 160px;
   position: absolute;
   margin-left: -(136px / 2);
   left: 50%;
-  top: -63px;
+}
+// ie
+* html [id=logo] {
+  background: transparent url("../assets/img/francejs-logo-big.png") no-repeat;
+  font-size: 2em
 }
 
 .top-header {
-  margin-top: emCalc(120px);
-  margin-bottom: 0;
+  height: 16em;
+  padding: 3em;
+  margin: 0 0 1em 0;
+  background: #FFF;
+  margin-top: 0;
+  border: 0;
+  border-bottom: 1px solid #E7E7E7;
+  border-top: 0.2em solid $burnYellow;
   position: relative;
+  box-shadow: 0 1px 0 #fff;
   @include pie-clearfix;
-  @extend .border-left;
-  @extend .border-right;
-  @media only screen and (max-width: $S) {
-    margin-top: emCalc(76px);
-  }
-  h2 {
-    background: $darkGrey;
-    margin: 0;
-    width: 50%;
-    text-align: center;
-    color: $nearlyWhite;
-    // font-size: 36px
-    padding: 0.2em;
-    float: left;
-    border-top: emCalc(12px) $headerBorder solid;
-    border-bottom: emCalc(16px) $headerBorder solid;
-    @media only screen and (max-width: $S) {
-      text-indent: -999em;
-    }
-    @include at-breakpoint($M) {
-      font-size: emCalc(30px);
-    }
-
-    @include at-breakpoint($L) {
-      font-size: emCalc(36px);
-    }
-  }
 }
 
 [id=asso],
 [id=commu] {
+  padding-left: 1.2em;
+  color: $darkGrey;
+  text-shadow: 0 1px 0 #fff;
   &:before {
     content: url("../assets/img/chevron.png");
-    margin-right: 0.2em;
+    margin-right: 0.4em;
     position: relative;
     top: 6px;
-    @media only screen and (max-width: $S) {
-      display: none;
-    }
+  }
+  @media only screen and (max-width: $S) {
+    text-align: center;
+    padding-left: 0;
   }
 }
 
+.primary p {
+  margin: 1em;
+  padding: 1em 0.7em;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-family: Georgia;
+  color: $darkGrey;  
+  font-style: italic;
+  text-align: center;
+
+  background: #fff;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.header {
+  margin: -1.5em -1.5em  1.5em -1.5em ;
+}
+article .header h2, .header h3 {
+  padding: 0.3em 0 0.3em 1em;
+  line-height: 1.5em;
+  margin: 0 0 1.5em;
+  background-color: $darkGrey;
+  background: linear-gradient($darkGrey, darken($darkGrey,5));
+  color: $nearlyWhite;
+  text-shadow: 0 -1px 0 darken($darkGrey,10);
+  @include border-left;
+}
 // MAIN
 
 section {
@@ -88,89 +108,70 @@ main {
   @media only screen and (max-width: $S) {
     @include span-columns(12, 12);
   }
-}
-
-.header {
-  & ~ * {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  & ~ ul,
-  & ~ol {
-    padding-left: 3em;
-    @media only screen and (max-width: $S) {
-      padding-left: 2.5em;
-    }
-  }
-  h2 {
-    font-size: emCalc(22px);
-    background: $darkGrey;
-    color: $nearlyWhite;
-    border-top: emCalc(14px) $headerBorder solid;
-    border-bottom: emCalc(10px) $headerBorder solid;
-    padding-left: emCalc(40px);
-    position: relative;
-    @media only screen and (max-width: $S) {
-      padding-left: 0.7em;
-    }
-    &:before {
-      content: "";
-      display: block;
-      background: $darkGrey;
-      width: 1em;
-      height: 1.098em;
-      position: absolute;
-      left: -1em;
-    }
+  section {
+    border-radius: 3px;
+    border-bottom: 1px solid darken($nearlyWhite, 10);
+    overflow: hidden;
   }
 }
-
 // Aside
+
+.community-links {
+  color: $darkGrey;
+}
 
 aside {
   @include span-columns(4 omega, 12);
+  section {
+    border-radius: 3px;
+    border-bottom: 1px solid darken($nearlyWhite, 10);
+    overflow: hidden;
+  }
   @media only screen and (max-width: $S) {
     @include span-columns(12, 12);
   }
 }
 
-@include font-face("fontello", font-files("fontello.woff", "fontello.ttf", "fontello.svg", "fontello.eot"));
 
 .social {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 1.4em;
+  text-align: center;
   li {
-    display: inline;
-    margin-right: 0.6%;
+    display: inline-block;
+    margin: 0.5em;
     &:last-child {
       margin-right: 0;
     }
   }
   a {
     display: inline-block;
+    vertical-align: top;
     position: relative;
-    width: 18.3%;
-    height: 60px;
+    width: 3em;
+    height: 3em;
+    border-radius: 3px;
     background: $darkGrey;
     color: $burnYellow;
     &:hover {
-      background: $headerBorder;
+      background: $burnYellow;
+      color: $nearlyWhite;
     }
     &:active {
-      color: $grayYellow;
+      box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+      .icon {
+        padding-top: 2px;
+      }
     }
   }
 }
 
 .icon {
   display: inline-block;
-  font-size: 2.4em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -12.2px;
-  margin-left: -22px;
+  font-size: 1.5em;
+  line-height: 2em;
   &:after {
     font-family: "fontello";
     speak: none;
@@ -212,20 +213,23 @@ aside {
 // FOOTER
 
 footer {
+  margin-top: 4em;
+  background: $footerBG;
+  border-top: 1px solid darken($footerBG, 5);
+  min-height: 5em;
   p {
-    font-size: 0.8em;
-    background: $footerBG;
     position: relative;
-    padding-left: 35%;
-    @media only screen and (max-width: $S) {
-      padding-left: 41%;
-      font-size: 0.6em;
-    }
+    margin: 0.5em 0;
+    padding-left: 11em;
+    font-size: 0.8em;
+    line-height: 2em;
+    color: darken($footerBG, 30);
+    text-shadow: 0 1px 0 #eee;
     &:before {
       content: url("../assets/img/francejs-logo-small.png");
       position: absolute;
-      top: -164%;
-      left: 8%;
+      top: -40px;
+      left: 1em;
     }
   }
 }

@@ -1,9 +1,9 @@
 // Border
 
-.border-left {
-  border-left: 1em $burnYellow solid;
+@mixin border-left {
+  border-left: 0.5em $burnYellow solid;
 }
 
-.border-right {
-  border-right: 1em $burnYellow solid;
+@mixin border-right {
+  border-right: 0.5em $burnYellow solid;
 }
