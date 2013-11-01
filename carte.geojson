@@ -1,6 +1,7 @@
 {
     "type": "FeatureCollection",
-    "features": [{
+    "features": [
+    {
         "type": "Feature",
         "properties": {
             "group": "NantesJS",
@@ -11,7 +12,8 @@
             "type": "Point",
             "coordinates": [-1.5503811836242676, 47.21201832013894]
         }
-    }, {
+    },
+    {
         "type": "Feature",
         "properties": {
             "group": "JSSophia",
@@ -22,5 +24,18 @@
             "type": "Point",
             "coordinates": [7.075077295303345, 43.618624980040664]
         }
-    }]
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "FranceJS.in(Toulouse)",
+            "date": "2013-11-23 ~ 2013-11-24",
+            "url": "http://francejs.org/conf2013.html"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [1.45534, 43.60218]
+        }
+    }
+    ]
 }
