@@ -210,13 +210,20 @@ aside {
   }
 }
 
+
+// MAP
+#map {
+  margin-top: 2em;
+}
+
 // FOOTER
 
 footer {
-  margin-top: 4em;
+  //margin-top: 4em;
   background: $footerBG;
-  border-top: 1px solid darken($footerBG, 5);
+  border-top: 1px solid darken($footerBG, 15);
   min-height: 5em;
+  margin-top: -5px;
   p {
     position: relative;
     margin: 0.5em 0;
