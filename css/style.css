@@ -74,8 +74,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 html, body { font-size: 100%; font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; line-height: 1.5em; color: #262626; background: #f3f3f3; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
 
-a { text-decoration: none; color: #efc000; font-weight: 500; text-decoration: underline; -webkit-transition: color 0.2s ease; -moz-transition: color 0.2s ease; -o-transition: color 0.2s ease; transition: color 0.2s ease; }
-a:hover { color: #575748; }
+a { text-decoration: none; color: #BB7800; font-weight: 500; text-decoration: underline; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
+a:hover { color: #f2c80a; text-decoration: none; }
+a:active { color: #a98b07; }
 
 hr { border: 0; height: 0; border-top: 1px solid rgba(38, 38, 38, 0.1); border-bottom: 1px solid rgba(38, 38, 38, 0.3); }
 

@@ -14,17 +14,17 @@ body {
 
 a {
   text-decoration: none;
-  color: #efc000;
+  color: #BB7800;
   font-weight: 500;
   text-decoration: underline;
-  @include transition(color 0.2s ease);
+  @include transition(all 0.2s ease);
   &:hover {
-    color: $grayYellow;
-    // text-decoration: underline
- 
+    color: $burnYellow;
+    text-decoration: none; 
   }
-  // &:active
-  //   color: darken($burnYellow, 15%)
+  &:active {
+    color: darken($burnYellow, 15);
+  }
 }
 
 hr {
