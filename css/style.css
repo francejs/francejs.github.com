@@ -139,6 +139,8 @@ aside section { border-radius: 3px; border-bottom: 1px solid #e1e1e1; overflow: 
 
 .groups:after { content: "\e800"; }
 
-footer { margin-top: 4em; background: lightgrey; border-top: 1px solid #c6c6c6; min-height: 5em; }
+#map { margin-top: 2em; }
+
+footer { background: lightgrey; border-top: 1px solid #adadad; min-height: 5em; margin-top: -5px; }
 footer p { position: relative; margin: 0.5em 0; padding-left: 11em; font-size: 0.8em; line-height: 2em; color: #868686; text-shadow: 0 1px 0 #eee; }
 footer p:before { content: url("../assets/img/francejs-logo-small.png"); position: absolute; top: -40px; left: 1em; }
