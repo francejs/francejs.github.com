@@ -36,6 +36,18 @@
             "type": "Point",
             "coordinates": [1.45534, 43.60218]
         }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "ParisJS",
+            "date": "2013-11-27",
+            "url": "http://parisjs.org/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.3508, 48.8567]
+        }
     }
     ]
 }
