@@ -46,7 +46,19 @@
         },
         "geometry": {
             "type": "Point",
-            "coordinates": [2.3508, 48.8567]
+            "coordinates": [1.45534, 43.60218]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "BordeauxJS",
+            "date": "2013-11-07",
+            "url": "http://www.meetup.com/BordeauxJS/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-0.5783, 44.8386]
         }
     }
     ]
