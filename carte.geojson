@@ -72,6 +72,18 @@
             "type": "Point",
             "coordinates": [6.563556, 46.524788]
         }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "JS Montreal",
+            "date": "2013-11-12",
+            "url": "http://js-montreal.org/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-73.580636, 45.475215]
+        }
     }
     ]
 }
