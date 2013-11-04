@@ -60,6 +60,30 @@
             "type": "Point",
             "coordinates": [-0.5783, 44.8386]
         }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "JavaScript Romandie",
+            "date": "2013-11-21",
+            "url": "http://www.meetup.com/jsromandie/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.563556, 46.524788]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "JS Montreal",
+            "date": "2013-11-12",
+            "url": "http://js-montreal.org/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-73.580636, 45.475215]
+        }
     }
     ]
 }
