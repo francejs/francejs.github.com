@@ -4,6 +4,18 @@
     {
         "type": "Feature",
         "properties": {
+            "group": "ChtiJS",
+            "date": "Fixée par Doodle, suivez @chtijs",
+            "url": "http://francejs.org/groupes.html#chti-js"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [50.630926, 3.059564]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
             "group": "NantesJS",
             "date": "2013-11-19",
             "url": "https://www.eventbrite.com/e/nantesjs-meetup-7-tickets-9354683109"
