@@ -79,8 +79,9 @@
             </div>
         </footer>
 
-
-
+        {% for js_file in page.extra_js %}
+            <script src="{{ js_file }}"></script>
+        {% endfor %}
 
          <script>
              (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
