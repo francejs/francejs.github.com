@@ -96,6 +96,18 @@
             "type": "Point",
             "coordinates": [-73.580636, 45.475215]
         }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "Paris EmberJS Meetup",
+            "date": "2014-01-09",
+            "url": "http://www.meetup.com/EmberJS-Paris/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.341002, 48.871834,]
+        }
     }
     ]
 }
