@@ -100,6 +100,18 @@
     {
         "type": "Feature",
         "properties": {
+            "group": "CaenJS",
+            "date": "2013-09-14",
+            "url": "http://caenjs.org/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-0.3712, 49.1811]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
             "group": "Paris EmberJS Meetup",
             "date": "2014-01-09",
             "url": "http://www.meetup.com/EmberJS-Paris/"
