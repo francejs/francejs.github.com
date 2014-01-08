@@ -120,6 +120,18 @@
             "type": "Point",
             "coordinates": [2.341002, 48.871834]
         }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "group": "MarseilleJS",
+            "date": "2014-01-08",
+            "url": "http://francejs.org/MarseilleJS/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.369889, 43.296346]
+        }
     }
     ]
 }
