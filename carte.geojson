@@ -1,137 +1,137 @@
 {
     "type": "FeatureCollection",
     "features": [
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "ChtiJS",
-            "date": "Fixée par Doodle, suivez @chtijs",
-            "url": "http://francejs.org/groupes.html#chti-js"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "ChtiJS",
+                "date": "Fixée par Doodle, suivez @chtijs",
+                "url": "http://francejs.org/groupes.html#chti-js"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.059564, 50.630926]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [3.059564, 50.630926]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "NantesJS",
-            "date": "2013-11-19",
-            "url": "https://www.eventbrite.com/e/nantesjs-meetup-7-tickets-9354683109"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "NantesJS",
+                "date": "2013-11-19",
+                "url": "https://www.eventbrite.com/e/nantesjs-meetup-7-tickets-9354683109"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-1.5503811836242676, 47.21201832013894]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-1.5503811836242676, 47.21201832013894]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "JSSophia",
-            "date": "2013-10-29",
-            "url": "https://groups.google.com/forum/#!topic/jssophia/Gf39N7S073A"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "JSSophia",
+                "date": "2013-10-29",
+                "url": "https://groups.google.com/forum/#!topic/jssophia/Gf39N7S073A"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.075077295303345, 43.618624980040664]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [7.075077295303345, 43.618624980040664]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "FranceJS.in(Toulouse)",
-            "date": "2013-11-23 ~ 2013-11-24",
-            "url": "http://francejs.org/conf2013.html"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "FranceJS.in(Toulouse)",
+                "date": "2013-11-23 ~ 2013-11-24",
+                "url": "http://francejs.org/conf2013.html"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [1.45534, 43.60218]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [1.45534, 43.60218]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "ParisJS",
-            "date": "2013-11-27",
-            "url": "http://parisjs.org/"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "ParisJS",
+                "date": "2013-11-27",
+                "url": "http://parisjs.org/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [2.351828, 48.856578]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [2.351828, 48.856578]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "BordeauxJS",
-            "date": "2013-11-07",
-            "url": "http://www.meetup.com/BordeauxJS/"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "BordeauxJS",
+                "date": "2013-11-07",
+                "url": "http://www.meetup.com/BordeauxJS/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.5783, 44.8386]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-0.5783, 44.8386]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "JavaScript Romandie",
-            "date": "2013-11-21",
-            "url": "http://www.meetup.com/jsromandie/"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "JavaScript Romandie",
+                "date": "2013-11-21",
+                "url": "http://www.meetup.com/jsromandie/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [6.563556, 46.524788]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.563556, 46.524788]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "JS Montreal",
-            "date": "2013-11-12",
-            "url": "http://js-montreal.org/"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "JS Montreal",
+                "date": "2013-11-12",
+                "url": "http://js-montreal.org/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.580636, 45.475215]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-73.580636, 45.475215]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "CaenJS",
-            "date": "2013-09-14",
-            "url": "http://caenjs.org/"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "CaenJS",
+                "date": "2013-09-14",
+                "url": "http://caenjs.org/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.3712, 49.1811]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-0.3712, 49.1811]
-        }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "Paris EmberJS Meetup",
-            "date": "2014-01-09",
-            "url": "http://www.meetup.com/EmberJS-Paris/"
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "Paris EmberJS Meetup",
+                "date": "2014-01-09",
+                "url": "http://www.meetup.com/EmberJS-Paris/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [2.341002, 48.871834]
+            }
         },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [2.341002, 48.871834]
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "MarseilleJS",
+                "date": "2014-01-08",
+                "url": "http://francejs.org/MarseilleJS/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [5.369889, 43.296346]
+            }
         }
-    },
-    {
-        "type": "Feature",
-        "properties": {
-            "group": "MarseilleJS",
-            "date": "2014-01-08",
-            "url": "http://francejs.org/MarseilleJS/"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.369889, 43.296346]
-        }
-    }
     ]
 }
