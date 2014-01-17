@@ -132,6 +132,18 @@
                 "type": "Point",
                 "coordinates": [5.369889, 43.296346]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "AmiensJS",
+                "date": "2014-01-17",
+                "url": "https://twitter.com/AmiensJS"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [2.297831, 49.894192]
+            }
         }
     ]
 }
