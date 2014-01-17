@@ -40,13 +40,13 @@
         {
             "type": "Feature",
             "properties": {
-                "group": "FranceJS.in(Toulouse)",
-                "date": "2013-11-23 ~ 2013-11-24",
-                "url": "http://francejs.org/conf2013.html"
+                "group": "ToulouseJS (à Epitech)",
+                "date": "2014-01-30",
+                "url": "http://toulousejs.francejs.org/"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [1.45534, 43.60218]
+                "coordinates": [1.448059, 43.609214]
             }
         },
         {
