@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
@@ -136,6 +137,10 @@ aside section { border-radius: 3px; border-bottom: 1px solid #e1e1e1; overflow: 
 .gplus:after { content: "\e802"; }
 
 .groups:after { content: "\e800"; }
+
+.fjs-Jobs ul { margin: 0; padding: 0; }
+.fjs-Jobs li { list-style: none; margin-bottom: 1em; }
+.fjs-Jobs li:before { content: '↪'; margin-right: 0.1em; }
 
 footer { margin-top: 4em; background: lightgrey; border-top: 1px solid #c6c6c6; min-height: 5em; }
 footer p { position: relative; margin: 0.5em 0; padding-left: 11em; font-size: 0.8em; line-height: 2em; color: #868686; text-shadow: 0 1px 0 #eee; }

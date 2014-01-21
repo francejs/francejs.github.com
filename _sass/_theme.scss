@@ -210,6 +210,27 @@ aside {
   }
 }
 
+
+
+.fjs-Jobs {
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 1em;
+
+    &:before {
+      content: '↪';
+      margin-right: 0.1em;
+    }
+  }
+
+}
+
 // FOOTER
 
 footer {
