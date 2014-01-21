@@ -112,14 +112,12 @@ main { width: 66.19718%; float: left; margin-right: 1.40845%; display: inline; }
 @media only screen and (max-width: 61.9375em) { main { width: 100%; float: left; margin-right: 1.40845%; display: inline; } }
 main section { border-radius: 3px; border-bottom: 1px solid #e1e1e1; overflow: hidden; }
 
-.community-links { color: #747471; }
-
 aside { width: 32.39437%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }
 aside section { border-radius: 3px; border-bottom: 1px solid #e1e1e1; overflow: hidden; }
 @media only screen and (max-width: 61.9375em) { aside { width: 100%; float: left; margin-right: 1.40845%; display: inline; } }
 
 .social { list-style: none; margin: 0; padding: 0; margin-top: 1.4em; text-align: center; }
-.social li { display: inline-block; margin: 0.5em; }
+.social li { display: inline-block; margin: 0.2em; }
 .social li:last-child { margin-right: 0; }
 .social a { display: inline-block; vertical-align: top; position: relative; width: 3em; height: 3em; border-radius: 3px; background: #747471; color: #f2c80a; }
 .social a:hover { background: #f2c80a; color: #fafafa; }

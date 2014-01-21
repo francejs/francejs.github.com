@@ -4,7 +4,7 @@
   max-width: emCalc(960px);
   margin: 0 auto;
   @include container;
-  // +susy-grid-background  
+  // +susy-grid-background
   @media only screen and (max-width: $S) {
     padding-left: 0;
     padding-right: 1em;
@@ -73,7 +73,7 @@ section {
   font-size: 1.2em;
   line-height: 1.5em;
   font-family: Georgia;
-  color: $darkGrey;  
+  color: $darkGrey;
   font-style: italic;
   text-align: center;
 
@@ -116,9 +116,9 @@ main {
 }
 // Aside
 
-.community-links {
-  color: $darkGrey;
-}
+// .community-links {
+//   color: $darkGrey;
+// }
 
 aside {
   @include span-columns(4 omega, 12);
@@ -141,7 +141,7 @@ aside {
   text-align: center;
   li {
     display: inline-block;
-    margin: 0.5em;
+    margin: 0.2em;
     &:last-child {
       margin-right: 0;
     }
