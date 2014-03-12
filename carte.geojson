@@ -144,6 +144,18 @@
                 "type": "Point",
                 "coordinates": [2.297831, 49.894192]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "ClermontJS",
+                "date": "Suivez notre actualité sur le site, la mailing list et twitter",
+                "url": "https://clermontjs.francejs.org"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.112726, 45.7870644]
+            }
         }
     ]
 }
