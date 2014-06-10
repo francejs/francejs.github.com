@@ -156,6 +156,18 @@
                 "type": "Point",
                 "coordinates": [3.112726, 45.7870644]
             }
-        }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "group": "MontpelierJS",
+                "date": "Fixée par Doodle, suivez @montpellierjs",
+                "url": "http://montpellierjs.github.io/MontpellierJS/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.869564, 43.609589]
+            }
+        },
     ]
 }
