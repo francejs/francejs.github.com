@@ -34,7 +34,7 @@
             html.push("<dt>" + date + "</dt>");
             for (var event in dates[date]) {
                 var eventDetails = dates[date][event];
-                html.push("<dd><a href='" + eventDetails.event_url + "'>" + eventDetails.name + "</a></dd>");
+                html.push("<dd><b>" + eventDetails.group.urlname + "</b> : <a href='" + eventDetails.event_url + "'>" + eventDetails.name + "</a></dd>");
             }
         }
         tgt.innerHTML = html.join('');
