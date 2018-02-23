@@ -1,28 +1,24 @@
-;(function() {
-
+(function() {
     // loads meetup.com events via JSONP
+    // https://www.meetup.com/fr-FR/meetup_api/auth/#keysign
 
-    var meetupConfig = {
-        // meetup Ids can be found in the meetup page, global var "chapterId" (WTF)
-        // or extracted from https://api.meetup.com/find/groups?&sign=true&text=Javascript&country=FR,CA&page=100
-        meetupsIds: [9114182, 2753202, 10685042, 3547912, 8516612, 6578312, 3549682, 7613172, 3948412, 10809052, 8524122, 10467552, 5580242, 3832302, 2875862, 11263702, 8607622, 10698982, 6939902, 10617582, 4878062, 2504782, 11687472, 13092622, 14810042, 17920532, 13111762, 16222542, 18305583, 15351542, 5477392, 18760220, 18494651, 2124131, 18380309, 18395295, 16765722, 18448516, 18467130, 19725441, 19657451, 21276917, 21032129, 26082883, 18684526, 22592902, 24515162, 20803737, 18464962, 19446895, 17953882, 19905746, 22260880, 18520882, 27112899, 15900042, 22816724, 19458797, 21985930, 21957984, 19960529, 18231415, 19944014, 3948412].join(','),
-        // this is mine :/
-        apiKey : '34332b3e4829556513f2d1712717158'
-    };
+    // use API signed urls
+    const meetupsUrl =
+        "https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_id=9114182%2C2753202%2C10685042%2C3547912%2C8516612%2C6578312%2C3549682%2C7613172%2C3948412%2C10809052%2C8524122%2C10467552%2C5580242%2C3832302%2C2875862%2C11263702%2C8607622%2C10698982%2C6939902%2C10617582%2C4878062%2C2504782%2C11687472%2C13092622%2C14810042%2C17920532%2C13111762%2C16222542%2C18305583%2C15351542%2C5477392%2C18760220%2C18494651%2C2124131%2C18380309%2C18395295%2C16765722%2C18448516%2C18467130%2C19725441%2C19657451%2C21276917%2C21032129%2C26082883%2C18684526%2C22592902%2C24515162%2C20803737%2C18464962%2C19446895%2C17953882%2C19905746%2C22260880%2C18520882%2C27112899%2C15900042%2C22816724%2C19458797%2C21985930%2C21957984%2C19960529%2C18231415%2C19944014%2C3948412&photo-host=public&time=0%2C3m&page=20&fields=&order=time&status=upcoming&desc=false&sig_id=24287712&sig=d6cee1069751a496d0fbb622d1e52489f94d34fc&callback=window.meetupCallback";
 
     // meetup.com JSONP callback
     window.meetupCallback = function(data) {
         if (!data.results) {
-            throw new Error('cannot fetch meetups');
+            throw new Error("cannot fetch meetups");
         }
-        var tgt = document.getElementById('events-list');
+        var tgt = document.getElementById("events-list");
         if (!tgt) {
-            throw new Error('cannot find target event-list');
+            throw new Error("cannot find target event-list");
         }
         // group items by date
         var dates = {};
         data.results.forEach(function(event) {
-            var eventDate = (new Date(event.time)).toLocaleDateString();
+            var eventDate = new Date(event.time).toLocaleDateString();
             if (!dates[eventDate]) {
                 dates[eventDate] = [];
             }
@@ -34,20 +30,25 @@
             html.push("<dt>" + date + "</dt>");
             for (var event in dates[date]) {
                 var eventDetails = dates[date][event];
-                html.push("<dd><b>" + eventDetails.group.urlname + "</b> : <a href='" + eventDetails.event_url + "'>" + eventDetails.name + "</a></dd>");
+                html.push(
+                    "<dd><b>" +
+                        eventDetails.group.urlname +
+                        "</b> : <a href='" +
+                        eventDetails.event_url +
+                        "'>" +
+                        eventDetails.name +
+                        "</a></dd>"
+                );
             }
         }
-        tgt.innerHTML = html.join('');
+        tgt.innerHTML = html.join("");
     };
 
     function jsonpLoad(url) {
-        var script = document.createElement('script');
+        var script = document.createElement("script");
         script.src = url;
         document.body.appendChild(script);
     }
 
-    var meetupsUrl = 'http://api.meetup.com/2/events?group_id=' + meetupConfig.meetupsIds + '&status=upcoming&order=time&limited_events=False&desc=false&offset=0&format=json&page=50&fields=&sign=true&key=' + meetupConfig.apiKey + '&callback=window.meetupCallback';
-
     jsonpLoad(meetupsUrl);
-
 })();
