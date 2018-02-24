@@ -83,7 +83,7 @@ hr { border: 0; height: 0; border-top: 1px solid rgba(38, 38, 38, 0.1); border-b
 
 @font-face { font-family: "fontello"; src: url('../assets/fonts/fontello.woff') format('woff'), url('../assets/fonts/fontello.ttf') format('truetype'), url('../assets/fonts/fontello.svg') format('svg'), url('../assets/fonts/fontello.eot') format('embedded-opentype'); }
 
-.wrapper { max-width: 60em; margin: 0 auto; padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto; }
+.wrapper { max-width: 70em; margin: 0 auto; padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto; }
 .wrapper:after { content: ""; display: table; clear: both; }
 @media only screen and (max-width: 61.9375em) { .wrapper { padding-left: 0; padding-right: 1em; } }
 
