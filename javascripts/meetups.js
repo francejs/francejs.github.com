@@ -32,7 +32,7 @@
                 var eventDetails = dates[date][event];
                 html.push(
                     "<dd><b>" +
-                        eventDetails.group.urlname +
+                        eventDetails.group_name +
                         "</b> : <a href='" +
                         eventDetails.event_url +
                         "'>" +
