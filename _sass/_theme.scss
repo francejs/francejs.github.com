@@ -1,9 +1,8 @@
-@include font-face("fontello", font-files("fontello.woff", "fontello.ttf", "fontello.svg", "fontello.eot"));
-
 .wrapper {
-  max-width: emCalc(960px);
+  max-width: emCalc(1120px);
   margin: 0 auto;
-  @include container;
+  display: flex;
+  flex-flow: row wrap;
   // +susy-grid-background
   @media only screen and (max-width: $S) {
     padding-left: 0;
@@ -47,7 +46,6 @@ section {
   border-top: 0.2em solid $burnYellow;
   position: relative;
   box-shadow: 0 1px 0 #fff;
-  @include pie-clearfix;
 }
 
 [id=asso],
@@ -66,7 +64,9 @@ section {
     padding-left: 0;
   }
 }
-
+.primary {
+  flex: 1 1 100%
+}
 .primary p {
   margin: 1em;
   padding: 1em 0.7em;
@@ -104,9 +104,9 @@ section {
 }
 
 main {
-  @include span-columns(8, 12);
+  flex: 1 0 66%;
   @media only screen and (max-width: $S) {
-    @include span-columns(12, 12);
+    flex: 1 0 100%;
   }
   section {
     border-radius: 3px;
@@ -121,14 +121,14 @@ main {
 // }
 
 aside {
-  @include span-columns(4 omega, 12);
+  flex: 1 0 33%;
   section {
     border-radius: 3px;
     border-bottom: 1px solid darken($nearlyWhite, 10);
     overflow: hidden;
   }
   @media only screen and (max-width: $S) {
-    @include span-columns(12, 12);
+    flex: 1 0 100%;
   }
 }
 
@@ -169,44 +169,10 @@ aside {
 }
 
 .icon {
-  display: inline-block;
-  font-size: 1.5em;
-  line-height: 2em;
-  &:after {
-    font-family: "fontello";
-    speak: none;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;
-  }
-}
-
-.github {
-  &:after {
-    content: "\e805";
-  }
-}
-
-.irc {
-  &:after {
-    content: "\e801";
-  }
-}
-
-.twitter {
-  &:after {
-    content: "\e804";
-  }
-}
-
-.gplus {
-  &:after {
-    content: "\e802";
-  }
-}
-
-.groups {
-  &:after {
-    content: "\e800";
+  svg {
+    max-width: 60%;
+    margin: 20%;
+    fill: currentColor
   }
 }
 

@@ -1,19 +1,25 @@
 # Website
 
-We must define here how the website must be.
+FranceJS Website
 
-# Requirements
+# How to
 
-## Gems ([Yeah yeah we know...](https://github.com/francejs/francejs.github.com/issues/5) )
+## Dependecies
 
-+ Jekyll
-+ Compass
-+ Susy (Compass extension)
+```bash
+gem install Jekyll
+```
 
-## Cmd
+## Build & dev
 
-Build all : `$ compass compile && jekyll build`
+Build website:
 
-- Compile css: ```$ compass compile```
-- Create website: ```$ jekyll build```
-- Local server: ```$ jekyll serve```
+```bash
+jekyll build
+```
+
+Local server for development:
+
+```bash
+jekyll serve
+```
