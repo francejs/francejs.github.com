@@ -1,1 +1,12 @@
-exclude: [config.rb, readme.md]
+exclude: [config.rb, readme.md, vendor]
+
+http_path: "/"
+css_dir: "css"
+sass:
+  sass_dir: "_sass/"
+images_dir: "assets/img"
+fonts_dir: "assets/fonts"
+javascripts_dir: "javascripts"
+output_style:  :compact
+relative_assets: true
+line_comments: false

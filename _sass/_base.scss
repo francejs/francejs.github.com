@@ -4,7 +4,7 @@ html,
 body {
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 1.5em;
   color: $dark;
   background: $bodyBG;
@@ -20,7 +20,7 @@ a {
   @include transition(all 0.2s ease);
   &:hover {
     color: $burnYellow;
-    text-decoration: none; 
+    text-decoration: none;
   }
   &:active {
     color: darken($burnYellow, 15);

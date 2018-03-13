@@ -8,6 +8,18 @@
   border: 0;
 }
 
+@mixin box-sizing ($s: 'border-box' ) {
+  -webkit-box-sizing: $s;
+  -moz-box-sizing: $s;
+  box-sizing: $s;
+}
+
+@mixin transition ($t: 'all 0.2s ease' ) {
+  -webkit-box-sizing: $t;
+  -moz-box-sizing: $t;
+  box-sizing: $t;
+}
+
 @function emCalc($pxWidth) {
   @return $pxWidth / $em-base * 1em;
 }
